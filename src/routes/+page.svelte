@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Counter from "./Counter.svelte";
     import Header from "./Header.svelte";
 
     let test = "test";
@@ -10,31 +9,6 @@
             console.log( "odd" );
         }
     }
-
-    let orig = "hack-word";
-    let hackword = "hack-word";
-    function hackeffect() {
-        console.log( "hover" );
-        let iter = 0;
-        let i = setInterval(() => {
-            let newword = "";
-            hackword.split("").map((c, ind) => {
-                if (ind < iter) {
-                    newword.concat(orig[ind]);
-                } else {
-                    newword.concat(String.fromCharCode(Math.floor(Math.random() * 26) + 97));
-                }
-            });
-            iter++;
-
-            if (iter > hackword.length) {
-                clearInterval(i);
-            }
-
-            hackword = newword;
-        }, 1000);
-    }
-
 </script>
 
 <svelte:head>
@@ -55,16 +29,10 @@
 
     <button on:click={() => test = "test"}>reset</button>
 
-    <p on:mousedown={hackeffect}>
-        {hackword}
-    </p>
-
     <div class="main">
         <h2>
             try leaving for now, <strong>the problem wont get better</strong>
         </h2>
-
-        <Counter />
     </div>
 
     <footer>
@@ -152,3 +120,26 @@
         }
     }
 </style>
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  
+
+    <h1>Projects</h1>
+    <div class="project-list">
+      <div class="project">
+        <h2>Project 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="https://example.com/project1" target="_blank"><img src="https://via.placeholder.com/400x300" alt="Project 1" /></a>
+      </div>
+      <div class="project">
+        <h2>Project 2</h2>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="https://example.com/project2" target="_blank"><img src="https://via.placeholder.com/400x300" alt="Project 2" /></a>
+      </div>
+    </div>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Test</h1>
+      <p>more text</p>
+    </div>
+

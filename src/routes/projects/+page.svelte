@@ -4,28 +4,33 @@
 
 <script context="module" lang="ts">
     //import projects from './projects';
+    const projects = [
+        {
+            name: "Project 1",
+            description: "Dumb thing.",
+            image: "https://via.placeholder.com/400x300",
+            url: "https://example.com/project1",
+        },
+        {
+            name: "Project 2",
+            description: "Sed do eiusmod temet dolore magna aliqua.",
+            image: "https://via.placeholder.com/400x300",
+            url: "https://example.com/project2",
+        },
+        // Add more projects here
+    ];
 </script>
-
 
 <h1>Projects</h1>
 
 <div class="project-list">
-  <!-- {#each projects as project} -->
-  <!--   <div class="project"> -->
-  <!--     <h2>{project.name}</h2> -->
-  <!--     <p>{project.description}</p> -->
-  <!--   </div> -->
-  <!-- {/each} -->
-</div>
-
-<div class="project-list">
-  <!-- {#each projects as project} -->
-  <!--   <div class="project"> -->
-  <!--     <h2>{project.name}</h2> -->
-  <!--     <p>{project.description}</p> -->
-  <!--     <a href={project.url} target="_blank"><img src={project.image} alt={project.name} /></a> -->
-  <!--   </div> -->
-  <!-- {/each} -->
+    {#each projects as project}
+      <div class="project">
+        <h2>{project.name}</h2>
+        <p>{project.description}</p>
+        <a href={project.url} target="_blank"><img src={project.image} alt={project.name} /></a>
+      </div>
+    {/each}
 </div>
 
 <!-- <div> -->
@@ -44,7 +49,6 @@
 <!--         <img src="https://via.placeholder.com/150" alt="Topical"> -->
 <!--     </div> -->
 <!-- </div> -->
-
 
 <style lang="scss">
     .project-names {
@@ -65,24 +69,24 @@
         margin: 1em;
     }
 
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    .project-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-  .project {
-    flex-basis: 33%;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #f7f7f7;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    text-align: center;
-  }
+    .project {
+        flex-basis: 33%;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #f7f7f7;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
 
-  .project h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5
-}
+    .project h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5;
+    }
 </style>
