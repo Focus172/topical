@@ -1,37 +1,31 @@
-
-
-<script>
-</script>
-
-
 <!-- this is the projects page which list my current projects and links to them -->
 <!-- on the right side of the page there is the tile and a description of the projects -->
 <!-- on the left there is a photo with the link underneath it -->
 
 <script context="module" lang="ts">
-  import projects from './projects';
+    //import projects from './projects';
 </script>
 
 
 <h1>Projects</h1>
 
 <div class="project-list">
-  {#each projects as project}
-    <div class="project">
-      <h2>{project.name}</h2>
-      <p>{project.description}</p>
-    </div>
-  {/each}
+  <!-- {#each projects as project} -->
+  <!--   <div class="project"> -->
+  <!--     <h2>{project.name}</h2> -->
+  <!--     <p>{project.description}</p> -->
+  <!--   </div> -->
+  <!-- {/each} -->
 </div>
 
 <div class="project-list">
-  {#each projects as project}
-    <div class="project">
-      <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      <a href={project.url} target="_blank"><img src={project.image} alt={project.name} /></a>
-    </div>
-  {/each}
+  <!-- {#each projects as project} -->
+  <!--   <div class="project"> -->
+  <!--     <h2>{project.name}</h2> -->
+  <!--     <p>{project.description}</p> -->
+  <!--     <a href={project.url} target="_blank"><img src={project.image} alt={project.name} /></a> -->
+  <!--   </div> -->
+  <!-- {/each} -->
 </div>
 
 <!-- <div> -->
