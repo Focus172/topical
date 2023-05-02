@@ -3,6 +3,7 @@
 <!-- on the left there is a photo with the link underneath it -->
 
 <script context="module" lang="ts">
+    import Header from '../Header.svelte';
     //import projects from './projects';
     const projects = [
         {
@@ -12,8 +13,8 @@
             url: "https://example.com/project1",
         },
         {
-            name: "Project 2",
-            description: "Sed do eiusmod temet dolore magna aliqua.",
+            name: "Change the World",
+            description: "This one is gonnna be crazy wack.",
             image: "https://via.placeholder.com/400x300",
             url: "https://example.com/project2",
         },
@@ -21,6 +22,7 @@
     ];
 </script>
 
+<Header />
 <h1>Projects</h1>
 
 <div class="project-list">
