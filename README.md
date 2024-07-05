@@ -1,26 +1,13 @@
-# Scurvyless 
-
-## Site 
-
+# Scurvyless
+## Site
 For a preview navigate [here](https://scurvyless.web.app/).
 
 ## Developing
-
-clone the repo and run
-
-Just dry test with svelte
+To host locally:
 ```bash
-npm install
-npm run dev
-```
+# With firebase
+firebase serve
 
-To host locally with firebase
-```bash
-# only if needed
-npm install -g firebase-tools 
-
-# hosting the website locally
-npm install
-npm run build
-npm exec firebase serve
+# OR python
+python3 -m http.server -d public/
 ```
