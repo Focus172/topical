@@ -1,9 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      ".git",
-      "README.md"
-    ]
+    "ignore": []
   }
 }
