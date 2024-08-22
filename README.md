@@ -1,13 +1,10 @@
 # Scurvyless
 ## Site
-For a preview navigate [here](https://scurvyless.web.app/).
+Website is hosted publically [here](https://gingerfocus.dev).
 
 ## Developing
 To host locally:
 ```bash
-# With firebase
-firebase serve
-
-# OR python
-python3 -m http.server -d public/
+./mk.sh build
+./mk.sh serve
 ```
