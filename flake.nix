@@ -1,27 +1,23 @@
 {
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
   outputs = { self, nixpkgs }: let
     lib = nixpkgs.lib;
     systems = [ "aarch64-linux" "x86_64-linux" ];
     eachSystem = f: lib.foldAttrs lib.mergeAttrs { } (map (s: lib.mapAttrs (_: v: { ${s} = v; }) (f s)) systems);
-    # forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
   in
     eachSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
       in {
         devShells.default = pkgs.stdenv.mkDerivation {
-          name = "scurvyless";
-          # pname = "zss";
-          # version = "0.1.0";
+          pname = "scurvyless";
+          version = "0.1.0";
 
-          nativeBuildInputs = with pkgs; [ ];
-          buildInputs = with pkgs; [ hugo ];
+          nativeBuildInputs = with pkgs; [ pandoc ];
+          buildInputs = with pkgs; [ ];
 
-          src = self;
+          src = ./.;
 
           # shellHook = ''export VIMRUNTIME=$PWD/runtime'';
 

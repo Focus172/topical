@@ -13,10 +13,7 @@ body {
 a:link { color: #309090; text-decoration: none;}
 a:visited { color: #309090; }
 
-h1 {
-    font-size: 83px; margin:0px; line-height:96px; 
-    /* color: #d9480f */
-}
+h1 { font-size: 83px; margin:0px; line-height:96px; color: #d9480f; }
 
 /* .grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: auto; } */
 /* .grid > div { */
@@ -27,6 +24,6 @@ h1 {
 /*       color: #d9480f; */
 /* } */
 
-/* p { font-size:17px; margin-bottom:0px; margin-top:0px; } */
+p { font-size:17px; margin-bottom:0px; margin-top:0px; }
 /* #tag { max-width: 680px; } */
 
