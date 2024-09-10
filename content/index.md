@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Scurvyless
 **Do Less, Be More, Eat Fruit**
 
@@ -29,7 +33,7 @@ What I use and how
 ### [Writing](/write)
 Stories for noone
 
-### [Games](/game)
+### [Games](/games)
 Games I play
 
 ### [Metro Star](/metro)
@@ -38,7 +42,7 @@ Better restraunt grades
 ## About Me
 
 ### Contact
-- <a href="mailto:evan.stokdyk@gmail.com">Email</a>
-- <a href="tel:+1234567890">Phone</a>
+- [Email](mailto:evan.stokdyk@gmail.com)
+<!-- - [Phone](tel:+1234567890) -->
 
 <!-- <img src="/human-made-mark.svg" /> -->

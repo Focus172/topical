@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="gingerfocus" />
+$if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+    <meta name="description" content="$description-meta$" />
+$endif$
+    <meta name="description" content="Thinking for those who listen.">
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+    <link href="/style.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" />
+</head>
+<body>
+<div style="display: flex; align-items: center; justify-content: space-around;">
+    <a href="/blog">Blog</a>
+    <a href="/tech">Tech</a>
+    <a href="/games">Games</a>
+    <a href="/metro">Metro</a>
+    <a href="/write">Writing</a>
+    <a href="https://github.com/focus172/scurvyless">Source</a>
+</div>
+$if(title)$
+<header id="title-block-header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+$if(date)$
+<p class="date">$date$</p>
+$endif$
+</header>
+$endif$
+<!-- <nav id="$idprefix$TOC" role="doc-toc"> -->
+<!-- $table-of-contents$ -->
+<!-- </nav> -->
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>

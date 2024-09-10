@@ -1,15 +1,18 @@
 #!/bin/sh
 
+name="$0"
+
 usage() {
-    echo "mk.sh [(b)uild|(s)erve|(d)eploy]"
+    echo "usage: $name build|clean|deploy|serve"
     exit 1
 }
 
-case $1 in
+case "$1" in
+    "clean" | "c")
+        rm -r public
+        ;;
     "build" | "b")
-        mkdir -p public
-        rm -r public/*
-        zig build run -- content/ public/
+        zig build -p public
         ;;
     "serve" | "s")
         python3 -m http.server -d public/
@@ -21,7 +24,4 @@ case $1 in
         usage
         ;;
 esac
-
-
-
 
